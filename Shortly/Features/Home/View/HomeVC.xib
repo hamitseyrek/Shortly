@@ -37,10 +37,37 @@
                                 <constraint firstAttribute="height" constant="632" id="l3g-Ot-4Qz"/>
                             </constraints>
                         </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Sz-GD-TJb">
+                            <rect key="frame" x="60" y="732" width="294" height="50"/>
+                            <color key="backgroundColor" red="0.37054973839999999" green="0.37451601029999998" blue="0.87455356120000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="GhO-0A-Itf"/>
+                            </constraints>
+                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" title="SHORTEN IT!">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="23"/>
+                            </buttonConfiguration>
+                        </button>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Shorten a link here ..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HRm-9c-wyv">
+                            <rect key="frame" x="60" y="672" width="294" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="TyI-vN-EFd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" red="0.18096312880000001" green="0.15481746199999999" blue="0.25883412360000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
+                        <constraint firstItem="6Sz-GD-TJb" firstAttribute="top" secondItem="HRm-9c-wyv" secondAttribute="bottom" constant="10" id="5da-lZ-mw1"/>
+                        <constraint firstItem="HRm-9c-wyv" firstAttribute="leading" secondItem="vYc-O5-4oW" secondAttribute="leading" constant="60" id="5yI-FZ-yUx"/>
                         <constraint firstItem="uQT-Fw-pGP" firstAttribute="top" secondItem="vYc-O5-4oW" secondAttribute="top" id="FUq-Pj-3w3"/>
+                        <constraint firstItem="6Sz-GD-TJb" firstAttribute="leading" secondItem="vYc-O5-4oW" secondAttribute="leading" constant="60" id="IdY-bG-vXO"/>
+                        <constraint firstAttribute="trailing" secondItem="HRm-9c-wyv" secondAttribute="trailing" constant="60" id="T5o-dS-h2X"/>
+                        <constraint firstItem="HRm-9c-wyv" firstAttribute="top" secondItem="uQT-Fw-pGP" secondAttribute="bottom" constant="40" id="ghr-rD-77j"/>
+                        <constraint firstAttribute="trailing" secondItem="6Sz-GD-TJb" secondAttribute="trailing" constant="60" id="h9f-no-OOU"/>
                         <constraint firstAttribute="bottom" secondItem="DSV-TW-3Ae" secondAttribute="bottom" id="lUZ-FU-rcP"/>
                         <constraint firstAttribute="trailing" secondItem="uQT-Fw-pGP" secondAttribute="trailing" id="qv1-aP-nbd"/>
                         <constraint firstItem="uQT-Fw-pGP" firstAttribute="leading" secondItem="vYc-O5-4oW" secondAttribute="leading" id="tA5-iP-KRF"/>
