@@ -8,18 +8,28 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "WelcomeCell", bundle: Bundle.main), forCellReuseIdentifier: "Cell")
-        // Do any additional setup after loading the view.
+        tableView.contentInsetAdjustmentBehavior = .never
+        
+        
+        if #available(iOS 13.0, *) {
+            let statusBar = UIView(frame: UIApplication.shared.keyWindow?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero)
+            statusBar.backgroundColor = Helper().hexStringToUIColor(hex: "#F0F1F6")
+            statusBar.tag = 100
+            UIApplication.shared.keyWindow?.addSubview(statusBar)
+            
+        }
     }
 }
+
 
 extension HomeVC: UITableViewDelegate, UITableViewDataSource {
     
