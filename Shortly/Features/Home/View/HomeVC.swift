@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var shortenButton: UIButton!
+    @IBOutlet weak var shortenLabel: UITextField!
+    
+    private let viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +34,13 @@ class HomeVC: UIViewController {
             UIApplication.shared.keyWindow?.addSubview(statusBar)
             
         }
+    }
+    
+    @IBAction func shortenClicked(_ sender: Any) {
+        
+        guard let shortenLink = shortenLabel.text else { return }
+        
+        viewModel.getLinkInfo(shortenLink: shortenLink)
     }
 }
 

@@ -7,12 +7,19 @@
 
 import Foundation
 
-struct MainResult: Codable {
-    let ok: String
-    let result: SingleResult
+struct MainResult: Decodable {
+    let ok: Bool
+    let errorCode: Int?
+    let error: String?
+    let result: SingleResult?
+    
+    enum CodingKeys: String, CodingKey {
+        case ok, error, result
+        case errorCode = "error_code"
+    }
 }
 
-struct SingleResult: Codable {
+struct SingleResult: Decodable {
     let code, fullShortLink2, originalLink: String
     
     enum CodingKeys: String, CodingKey {
