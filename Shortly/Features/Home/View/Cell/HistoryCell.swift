@@ -13,17 +13,30 @@ class HistoryCell: UITableViewCell {
     @IBOutlet weak var originalLink: UILabel!
     @IBOutlet weak var whiteView: UIView!
     @IBOutlet weak var copyButton: UIButton!
+    @IBOutlet weak var delIcon: UIImageView!
+    
+    var didDelete: () -> ()  = { }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         whiteView.layer.cornerRadius = 10
         copyButton.layer.cornerRadius = 5
         // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
         
-        // Configure the view for the selected state
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            delIcon.isUserInteractionEnabled = true
+            delIcon.addGestureRecognizer(tapGestureRecognizer)
     }
     
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        didDelete()
+    }
+    
+    @IBAction func copyClicked(_ sender: Any) {
+        UIPasteboard.general.string = shortLink.text
+        copyButton.layer.backgroundColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
+        copyButton.setTitle("COPIED",for: .normal)
+        copyButton.titleLabel?.textColor = .blue
+    }
 }
