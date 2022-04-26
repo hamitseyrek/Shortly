@@ -56,13 +56,12 @@ class HomeViewModel {
                 
                 do {
                     try context.save()
-                    print("saved to core data")
                 } catch let err {
-                    print(err)
+                    print("Something went wrong 3", err)
                 }
             }
         } catch {
-            print("err ++++++")
+            
         }
         
         
@@ -89,7 +88,7 @@ class HomeViewModel {
                 }
             }
         } catch {
-            print("errr ********************")
+            print("Something went wrong 1")
         }
     }
     
@@ -98,14 +97,14 @@ class HomeViewModel {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let context = appDelegate.persistentContainer.viewContext
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MyLinks")
-        print(code, "**********")
+
         fetchRequest.predicate = NSPredicate (format: "code = '\(code)'")
         fetchRequest.returnsObjectsAsFaults = false
         
         do {
             
             let results = try context.fetch(fetchRequest)
-            print(results.count)
+
             for result in results as! [NSManagedObject] {
                 if let _ = result.value(forKey: "code") as? String {
                     
@@ -119,8 +118,7 @@ class HomeViewModel {
                 }
             }
         } catch {
-            print("err ++++++")
-        }
+                print("Something went wrong 2")        }
     }
 }
 
