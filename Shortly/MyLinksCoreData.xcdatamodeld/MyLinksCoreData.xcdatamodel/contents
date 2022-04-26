@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21E258" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="MyLinks" representedClassName="MyLinks" syncable="YES" codeGenerationType="class">
+        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="fullShortLink2" optional="YES" attributeType="String"/>
+        <attribute name="originalLink" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="MyLinks" positionX="-45" positionY="0" width="128" height="74"/>
+    </elements>
+</model>

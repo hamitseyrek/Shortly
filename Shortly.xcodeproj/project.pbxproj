@@ -27,6 +27,7 @@
 		5E07494228161C98003FC860 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 5E07494128161C98003FC860 /* Alamofire */; };
 		5E0749442816F22D003FC860 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0749432816F22D003FC860 /* HomeViewModel.swift */; };
 		5E07494628173E63003FC860 /* MyError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E07494528173E63003FC860 /* MyError.swift */; };
+		5E07495328178BD5003FC860 /* MyLinksCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E07495128178BD5003FC860 /* MyLinksCoreData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		5E07493E28161BBF003FC860 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		5E0749432816F22D003FC860 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5E07494528173E63003FC860 /* MyError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyError.swift; sourceTree = "<group>"; };
+		5E07495228178BD5003FC860 /* MyLinksCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyLinksCoreData.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				5E0749222815F136003FC860 /* Base */,
 				5E0748FB2815F106003FC860 /* Assets.xcassets */,
 				5E0749002815F106003FC860 /* Info.plist */,
+				5E07495128178BD5003FC860 /* MyLinksCoreData.xcdatamodeld */,
 			);
 			path = Shortly;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				5E0748F52815F104003FC860 /* SceneDelegate.swift in Sources */,
 				5E07493D281618C6003FC860 /* ApiService.swift in Sources */,
 				5E07493F28161BBF003FC860 /* HomeModel.swift in Sources */,
+				5E07495328178BD5003FC860 /* MyLinksCoreData.xcdatamodeld in Sources */,
 				5E07493628160047003FC860 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,6 +743,19 @@
 			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		5E07495128178BD5003FC860 /* MyLinksCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5E07495228178BD5003FC860 /* MyLinksCoreData.xcdatamodel */,
+			);
+			currentVersion = 5E07495228178BD5003FC860 /* MyLinksCoreData.xcdatamodel */;
+			path = MyLinksCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5E0748E72815F104003FC860 /* Project object */;
 }

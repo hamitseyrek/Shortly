@@ -9,6 +9,8 @@ import UIKit
 
 class HistoryCell: UITableViewCell {
 
+    @IBOutlet weak var shortLink: UILabel!
+    @IBOutlet weak var originalLink: UILabel!
     @IBOutlet weak var whiteView: UIView!
     @IBOutlet weak var copyButton: UIButton!
     override func awakeFromNib() {
