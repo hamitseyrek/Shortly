@@ -47,7 +47,7 @@ class HomeVC: UIViewController {
     }
     
     func reloadTableView() {
-        
+        print("burada2")
         viewModel.getFromCoreData()
         dataSource = viewModel.dataSource
         
@@ -94,7 +94,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             cell.shortLink.text = dataSource.reversed()[indexPath.row].fullShortLink2
             return cell
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

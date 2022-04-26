@@ -36,7 +36,7 @@ class ApiService: ApiServiceProtocol {
                   }
                   
               } catch {
-                  print(response.error?.localizedDescription ?? "Something went wrong")
+                  print(response.error?.localizedDescription ?? "Something went wrong 4")
                   return
               }
           }
