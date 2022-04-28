@@ -73,7 +73,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             return dataSource.count
         }
     }
-
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -90,7 +90,14 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             }
             cell.layer.cornerRadius = 20
             
-            cell.originalLink.text = dataSource.reversed()[indexPath.row].code
+            cell.didDelete = { [weak self] in
+                guard let self = self else { return }
+                
+                self.viewModel.delFromCoreData(code: self.dataSource.reversed()[indexPath.row].code)
+                self.reloadTableView()
+            }
+            
+            cell.originalLink.text = dataSource.reversed()[indexPath.row].originalLink
             cell.shortLink.text = dataSource.reversed()[indexPath.row].fullShortLink2
             return cell
         }
@@ -132,16 +139,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             return 0
         } else {
             return 50
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-        if dataSource.count != 0 {
-            
-            viewModel.delFromCoreData(code: dataSource[indexPath.row].code)
-            dataSource.remove(at: indexPath.row)
-            self.reloadTableView()
         }
     }
 }

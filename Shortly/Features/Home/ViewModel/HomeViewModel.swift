@@ -27,6 +27,7 @@ class HomeViewModel {
                     DispatchQueue.main.async { [weak self] in
                         self?.singleResult = singleResult
                         self?.saveToCoreData()
+                        print("burada1")
                     }
                 }
             }
