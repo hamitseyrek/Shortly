@@ -23,12 +23,12 @@ class HistoryCell: UITableViewCell {
         copyButton.layer.cornerRadius = 5
         // Initialization code
         
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(delImageTapped(tapGestureRecognizer:)))
             delIcon.isUserInteractionEnabled = true
             delIcon.addGestureRecognizer(tapGestureRecognizer)
     }
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    @objc func delImageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
         didDelete()
     }
